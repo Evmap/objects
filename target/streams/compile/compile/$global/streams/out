@@ -1,0 +1,67 @@
+[debug] 
+[debug] Initial source changes: 
+[debug] 	removed:Set()
+[debug] 	added: Set(/Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/common/package.scala, /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetData.scala, /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetReader.scala, /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetSet.scala)
+[debug] 	modified: Set()
+[debug] Removed products: Set()
+[debug] External API changes: API Changes: Set()
+[debug] Modified binary dependencies: Set()
+[debug] Initial directly invalidated sources: Set(/Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/common/package.scala, /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetData.scala, /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetReader.scala, /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetSet.scala)
+[debug] 
+[debug] Sources indirectly invalidated by:
+[debug] 	product: Set()
+[debug] 	binary dep: Set()
+[debug] 	external source: Set()
+[debug] All initially invalidated sources: Set(/Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/common/package.scala, /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetData.scala, /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetReader.scala, /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetSet.scala)
+[debug] Recompiling all 4 sources: invalidated sources (4) exceeded 50.0% of all sources
+[info] Compiling 4 Scala sources to /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/target/scala-2.11/classes...
+[debug] Getting compiler-interface from component compiler for Scala 2.11.5
+[debug] Getting compiler-interface from component compiler for Scala 2.11.5
+[debug] Running cached compiler 6d35c4ce, interfacing (CompilerInterface) with Scala compiler version 2.11.5
+[debug] Calling Scala compiler with arguments  (CompilerInterface):
+[debug] 	-deprecation
+[debug] 	-unchecked
+[debug] 	-optimise
+[debug] 	-Yinline-warnings
+[debug] 	-bootclasspath
+[debug] 	/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/jre/classes:/Users/dmitrytrifonov/Documents/projects/course/activator-dist-1.3.10/repository/org.scala-lang/scala-library/2.11.5/jars/scala-library.jar
+[debug] 	-classpath
+[debug] 	/Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/target/scala-2.11/classes:/Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/lib/cafesat_2.11-0.01.jar:/Users/dmitrytrifonov/Documents/projects/course/activator-dist-1.3.10/repository/org.scalacheck/scalacheck_2.11/1.12.1/jars/scalacheck_2.11.jar:/Users/dmitrytrifonov/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.11/bundles/scala-parser-combinators_2.11-1.0.4.jar:/Users/dmitrytrifonov/.ivy2/cache/org.scala-sbt/test-interface/jars/test-interface-1.0.jar:/Users/dmitrytrifonov/.ivy2/cache/ch.epfl.lamp/scala-grading-runtime_2.11/jars/scala-grading-runtime_2.11-0.2.jar:/Users/dmitrytrifonov/.ivy2/cache/org.scalatest/scalatest_2.11/bundles/scalatest_2.11-2.2.1.jar:/Users/dmitrytrifonov/Documents/projects/course/activator-dist-1.3.10/repository/org.scala-lang/scala-reflect/2.11.2/jars/scala-reflect.jar:/Users/dmitrytrifonov/Documents/projects/course/activator-dist-1.3.10/repository/org.scala-lang.modules/scala-xml_2.11/1.0.2/bundles/scala-xml_2.11.jar
+[debug] Scala compilation took 8.008868422 s
+[debug] Invalidating /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/common/package.scala...
+[debug] Invalidating (transitively) by inheritance from /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/common/package.scala...
+[debug] Initial set of included nodes: Set(/Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/common/package.scala)
+[debug] Invalidated by transitive inheritance dependency: Set(/Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/common/package.scala)
+[debug] The /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/common/package.scala source file has the following regular definitions changed:
+[debug] 	notify, package, wait, $asInstanceOf, equals, asInstanceOf, synchronized, $isInstanceOf, resourceAsStreamFromSrc, notifyAll, isInstanceOf, ???, ==, clone, subFile, toString, !=, getClass, ne, eq, ##, finalize, hashCode, ***.
+[debug] All member reference dependencies will be considered within this context.
+[debug] Invalidating /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetData.scala...
+[debug] Invalidating (transitively) by inheritance from /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetData.scala...
+[debug] Initial set of included nodes: Set(/Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetData.scala)
+[debug] Invalidated by transitive inheritance dependency: Set(/Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetData.scala)
+[debug] The /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetData.scala source file has the following regular definitions changed:
+[debug] 	notify, amazondeals, CNET, gizmodo, wait, $asInstanceOf, mashable, gadgetlab, equals, asInstanceOf, synchronized, engadget, TweetData, $isInstanceOf, notifyAll, isInstanceOf, ==, clone, toString, !=, getClass, ne, TechCrunch, eq, ##, finalize, hashCode.
+[debug] All member reference dependencies will be considered within this context.
+[debug] The following modified names cause invalidation of /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetReader.scala: Set(amazondeals, CNET, gizmodo, mashable, gadgetlab, asInstanceOf, engadget, TweetData, toString, TechCrunch)
+[debug] Invalidating /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetReader.scala...
+[debug] Invalidating (transitively) by inheritance from /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetReader.scala...
+[debug] Initial set of included nodes: Set(/Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetReader.scala)
+[debug] Invalidated by transitive inheritance dependency: Set(/Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetReader.scala)
+[debug] The /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetReader.scala source file has the following regular definitions changed:
+[debug] 	notify, engadgetTweets, wait, mashableTweets, TweetReader, $asInstanceOf, ParseTweets, equals, siteTweetSetMap, asInstanceOf, synchronized, getTweets, tweetMap, $isInstanceOf, getMap, notifyAll, isInstanceOf, cnetTweets, amazondealsTweets, allTweets, gizmodoTweets, unionOfAllTweetSets, getTweetData, techCrunchTweets, toTweetSet, ==, clone, gadgetlabTweets, getList, toString, !=, getClass, sites, unparseToData, ne, tweetSets, sources, eq, ##, finalize, hashCode.
+[debug] All member reference dependencies will be considered within this context.
+[debug] The following modified names cause invalidation of /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetSet.scala: Set(TweetReader, allTweets)
+[debug] Invalidating /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetSet.scala...
+[debug] Invalidating (transitively) by inheritance from /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetSet.scala...
+[debug] Initial set of included nodes: Set(/Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetSet.scala)
+[debug] Invalidated by transitive inheritance dependency: Set(/Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetSet.scala)
+[debug] The /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetSet.scala source file has the following regular definitions changed:
+[debug] 	notify, findMin0, GoogleVsApple, wait, getTweetsFromListOfTopics, $asInstanceOf, size, union, equals, head, asInstanceOf, executionStart, NonEmptyTrending, incl, synchronized, $isInstanceOf, google, text, tail, main, retweets, notifyAll, isInstanceOf, filter, <init>, Trending, remove, Empty, ==, clone, foreach, Tweet, TweetSet, Main, toString, args, apple, +, !=, ascendingByRetweet, getClass, filter0, googleTweets, EmptyTrending, contains, isEmpty, ne, findMin, trending, user, eq, NonEmpty, delayedInit, ##, appleTweets, finalize, hashCode.
+[debug] All member reference dependencies will be considered within this context.
+[debug] The following modified names cause invalidation of /Users/dmitrytrifonov/Documents/projects/scala/ulyanov/objsets/src/main/scala/objsets/TweetReader.scala: Set(union, head, asInstanceOf, incl, text, tail, retweets, <init>, Empty, foreach, Tweet, TweetSet, toString, +, isEmpty, user)
+[debug] New invalidations:
+[debug] 	Set()
+[debug] Initial set of included nodes: Set()
+[debug] Previously invalidated, but (transitively) depend on new invalidations:
+[debug] 	Set()
+[debug] All newly invalidated sources after taking into account (previously) recompiled sources:Set()
