@@ -14,19 +14,17 @@ abstract class TweetSet {
   def filter(p: Tweet => Boolean): TweetSet = filter0(p, new Empty)
   def filter0(p: Tweet => Boolean, accu: TweetSet): TweetSet
 
-  def filterAcc(p: Tweet => Boolean, acc: TweetSet): TweetSet
+  def union(that: TweetSet): TweetSet = {
+    if (that.isEmpty) this
+    else incl(that.head) union that.tail
+  }
 
-  def union(that: TweetSet): TweetSet
-
-  def ascendingByRetweet: Trending = {
-
-    def iter(set: TweetSet, accu: Trending): Trending = {
-      if (set.isEmpty) accu
-      else iter(set.remove(set.findMin0(set.head)),accu.+(set.findMin0(set.head)))
+  def descendingByRetweet: Trending = {
+    if (isEmpty) new EmptyTrending
+    else {
+      val min = findMin
+      new NonEmptyTrending(min, remove(min).descendingByRetweet)
     }
-
-    iter(this,new EmptyTrending)
-
   }
 
   def incl(x: Tweet): TweetSet
@@ -56,9 +54,7 @@ abstract class TweetSet {
 
 class Empty extends TweetSet {
 
-  def filter0(p: Tweet => Boolean, accu: TweetSet): TweetSet = { new Empty}
-
-  def union(that: TweetSet) : TweetSet = that
+  def filter0(p: Tweet => Boolean, accu: TweetSet): TweetSet = accu
 
   def contains(x: Tweet): Boolean = false
   def incl(x: Tweet): TweetSet = new NonEmpty(x, new Empty, new Empty)
@@ -71,30 +67,10 @@ class Empty extends TweetSet {
 
 class NonEmpty(elem: Tweet, left: TweetSet, right: TweetSet) extends TweetSet {
 
-  def size(set: TweetSet): Int = {
-    if (set.isEmpty) 0
-    else 1 + size(set.tail)
-  }
-
   def filter0(p: Tweet => Boolean, accu: TweetSet): TweetSet = {
-
-    if (p(elem)) {
-
-      if (!left.isEmpty) left.filter0(p,accu.incl(elem)).union(right.filter0(p,accu))
-      else if (!right.isEmpty) right.filter0(p,accu.incl(elem).union(left.filter0(p,accu)))
-      else  accu.incl(elem)
-    }
-    else {
-      if (!left.isEmpty) left.filter0(p,accu).union(right.filter0(p,accu))
-      else if (!right.isEmpty) right.filter0(p,accu).union(left.filter0(p,accu))
-      else accu
-    }
-  }
-
-  def union(that: TweetSet) : TweetSet = {
-    if (that.isEmpty) this
-    else if (contains(that.head)) union(that.tail)
-    else union(that.tail).incl(that.head)
+    val leftright = left.filter0(p, right.filter0(p, accu))
+    if (p(elem)) leftright.incl(elem)
+    else leftright
   }
 
   def contains(x: Tweet): Boolean =
@@ -156,21 +132,13 @@ object GoogleVsApple {
 
   val apple = List("ios", "iOS", "iphone", "iPhone", "ipad", "iPad")
 
-  val googleTweets: TweetSet = getTweetsFromListOfTopics(google,new Empty)
+  def byKeywords(words: List[String]) = (t:Tweet) => words.exists( (term) => t.text.contains(term) )
 
-  val appleTweets: TweetSet = getTweetsFromListOfTopics(apple,new Empty)
+  val googleTweets: TweetSet = TweetReader.allTweets.filter( byKeywords(google) )
 
-  def getTweetsFromListOfTopics(topicList: List[String], accu: TweetSet): TweetSet = {
-    if (topicList.isEmpty) accu
-    else getTweetsFromListOfTopics(topicList.tail,accu.union(TweetReader.allTweets.filter(tw => tw.text contains topicList.head)))
-  }
+  val appleTweets: TweetSet = TweetReader.allTweets.filter( byKeywords(apple) )
 
-  def size(set: TweetSet): Int = {
-    if (set.isEmpty) 0
-    else 1 + size(set.tail)
-  }
-
-  val trending: Trending = googleTweets.union(appleTweets).ascendingByRetweet
+  val trending: Trending = googleTweets.union(appleTweets).descendingByRetweet
 }
 object Main extends App {
   GoogleVsApple.trending foreach println
